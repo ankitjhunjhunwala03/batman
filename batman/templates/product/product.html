@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-4" width="33%">
+	<img src="{{products.0.images.all.0.image.url}}" width="100%">
+</div>
+<div class="col-md-4">
+	<h2>{{products.0.name}}</h2>
+	<div>
+		<div class="pull-left">
+			<h3>Price: </h3>
+			<strike>{{products.0.marked_price}}</strike>
+			{{products.0.discounted_price}}
+		</div>
+		<div class="pull-right" style="margin-top:30px">
+			<button onclick="location.href = 'http://www.amazon.in/B2-CLASSIC-batman-tshirt-batmanblack-38/dp/B01AJXZDP4/ref=sr_1_1?s=apparel&ie=UTF8&qid=1458068570&sr=1-1&keywords=B2+CLASSIC+batman+tshirt+For+Men+Black+Color';">Buy Now</button>
+		</div>
+	</div>
+	<div style="clear:both;">
+	<br>
+		{{products.0.long_description}}
+	</div>
+</div>
+<div class="col-md-4">
+	Articles
+</div>
+{% endblock %}

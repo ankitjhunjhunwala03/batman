@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Products:</h3>
+{% for product in products %}
+	<div class="col-md-4">
+
+		<a href="/product"><img src="{{product.images.all.0.image.url}}" class="img-responsive"></a>
+		<div class="product-thumbnail-footer">
+			<div class="pull-left">
+				<div class="producttitle">{{product.name}}</div>
+				<div class="pricetext">{{product.discounted_price}}</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+{% endblock %}
